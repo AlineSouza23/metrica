@@ -2,29 +2,2066 @@ import React, { useEffect, useState, useCallback } from "react";
 
 // Sample data
 const sampleData = [
-  {
-    periodicidade: "1h",
-    plataforma: "Debito",
-    tipoMetrica: "Timeout",
-    min: "0",
-    max: "9999999",
-    ocorrencias: "1",
-    diario: "50.0",
-    semana: "1",
-    dif: "100.0",
+   {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Cancelada",
+      "min": "0",
+      "max": "49",
+      "ocorrencias": "1",
+      "diario": "40.0%",
+      "semana": "1",
+      "dif": "5.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Cancelada",
+      "min": "50",
+      "max": "99",
+      "ocorrencias": "1",
+      "diario": "30.0%",
+      "semana": "1",
+      "dif": "5.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Cancelada",
+      "min": "100",
+      "max": "299",
+      "ocorrencias": "1",
+      "diario": "7.0%",
+      "semana": "1",
+      "dif": "5.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Cancelada",
+      "min": "300",
+      "max": "499",
+      "ocorrencias": "1",
+      "diario": "5.0%",
+      "semana": "1",
+      "dif": "5.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Cancelada",
+      "min": "500",
+      "max": "699",
+      "ocorrencias": "1",
+      "diario": "3.5%",
+      "semana": "1",
+      "dif": "5.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Cancelada",
+      "min": "700",
+      "max": "899",
+      "ocorrencias": "1",
+      "diario": "3.0%",
+      "semana": "1",
+      "dif": "5.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Cancelada",
+      "min": "900",
+      "max": "999",
+      "ocorrencias": "1",
+      "diario": "2.5%",
+      "semana": "1",
+      "dif": "5.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Cancelada",
+      "min": "1000",
+      "max": "1999",
+      "ocorrencias": "1",
+      "diario": "2.0%",
+      "semana": "1",
+      "dif": "5.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Cancelada",
+      "min": "2000",
+      "max": "2999",
+      "ocorrencias": "1",
+      "diario": "2.5%",
+      "semana": "1.5",
+      "dif": "5.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Cancelada",
+      "min": "3000",
+      "max": "9999999",
+      "ocorrencias": "1",
+      "diario": "50.0%",
+      "semana": "1",
+      "dif": "5.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Debito",
+      "tipoMetrica": "Cancelada",
+      "min": "0",
+      "max": "49",
+      "ocorrencias": "1",
+      "diario": "20.0%",
+      "semana": "1",
+      "dif": "2.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Debito",
+      "tipoMetrica": "Cancelada",
+      "min": "50",
+      "max": "99",
+      "ocorrencias": "1",
+      "diario": "10.0%",
+      "semana": "1",
+      "dif": "2.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Debito",
+      "tipoMetrica": "Cancelada",
+      "min": "100",
+      "max": "299",
+      "ocorrencias": "1",
+      "diario": "2.0%",
+      "semana": "1",
+      "dif": "2.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Debito",
+      "tipoMetrica": "Cancelada",
+      "min": "300",
+      "max": "499",
+      "ocorrencias": "1",
+      "diario": "1.0%",
+      "semana": "1",
+      "dif": "2.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Debito",
+      "tipoMetrica": "Cancelada",
+      "min": "500",
+      "max": "699",
+      "ocorrencias": "1",
+      "diario": "0.9%",
+      "semana": "1",
+      "dif": "2.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Debito",
+      "tipoMetrica": "Cancelada",
+      "min": "700",
+      "max": "899",
+      "ocorrencias": "1",
+      "diario": "0.8%",
+      "semana": "1",
+      "dif": "2.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Debito",
+      "tipoMetrica": "Cancelada",
+      "min": "900",
+      "max": "999",
+      "ocorrencias": "1",
+      "diario": "0.7%",
+      "semana": "1",
+      "dif": "2.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Debito",
+      "tipoMetrica": "Cancelada",
+      "min": "1000",
+      "max": "1999",
+      "ocorrencias": "1",
+      "diario": "0.6%",
+      "semana": "1",
+      "dif": "2.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Debito",
+      "tipoMetrica": "Cancelada",
+      "min": "2000",
+      "max": "2999",
+      "ocorrencias": "1",
+      "diario": "0.5%",
+      "semana": "1",
+      "dif": "2.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Debito",
+      "tipoMetrica": "Cancelada",
+      "min": "3000",
+      "max": "9999999",
+      "ocorrencias": "1",
+      "diario": "30.0%",
+      "semana": "1",
+      "dif": "2.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Desfazimento",
+      "min": "0",
+      "max": "9999999",
+      "ocorrencias": "1",
+      "diario": "50.0%",
+      "semana": "1",
+      "dif": "100.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Debito",
+      "tipoMetrica": "Desfazimento",
+      "min": "0",
+      "max": "9999999",
+      "ocorrencias": "1",
+      "diario": "50.0%",
+      "semana": "1",
+      "dif": "100.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Negada",
+      "min": "0",
+      "max": "49",
+      "ocorrencias": "1",
+      "diario": "90.0%",
+      "semana": "1",
+      "dif": "30.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Negada",
+      "min": "50",
+      "max": "99",
+      "ocorrencias": "1",
+      "diario": "85.0%",
+      "semana": "1",
+      "dif": "30.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Negada",
+      "min": "100",
+      "max": "299",
+      "ocorrencias": "1",
+      "diario": "70.0%",
+      "semana": "1",
+      "dif": "30.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Negada",
+      "min": "300",
+      "max": "499",
+      "ocorrencias": "1",
+      "diario": "50.0%",
+      "semana": "1",
+      "dif": "30.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Negada",
+      "min": "500",
+      "max": "699",
+      "ocorrencias": "1",
+      "diario": "29.0%",
+      "semana": "1",
+      "dif": "30.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Negada",
+      "min": "700",
+      "max": "899",
+      "ocorrencias": "1",
+      "diario": "28.0%",
+      "semana": "1",
+      "dif": "30.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Negada",
+      "min": "900",
+      "max": "999",
+      "ocorrencias": "1",
+      "diario": "27.0%",
+      "semana": "1",
+      "dif": "30.0"
+    },
+    {
+      "periodicidade": "1h",
+      "plataforma": "Credito",
+      "tipoMetrica": "Negada",
+      "min": "1000",
+      "max": "1999",
+      "ocorrencias": "1",
+      "diario": "26.0%",
+      "semana": "1",
+      "dif": "30.0"
+    },
+    {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "2000",
+    "max": "2999",
+    "ocorrencias": "1",
+    "diario": "25.0%",
+    "semana": "1",
+    "dif": "30.0"
   },
   {
-    periodicidade: "1d",
-    plataforma: "Credito",
-    tipoMetrica: "Cancelada",
-    min: "5",
-    max: "9",
-    ocorrencias: "1",
-    diario: "90.0",
-    semana: "10",
-    dif: "10.0",
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "3000",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "95.0%",
+    "semana": "1",
+    "dif": "30.0"
   },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "0",
+    "max": "49",
+    "ocorrencias": "1",
+    "diario": "40.0%",
+    "semana": "1",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "50",
+    "max": "99",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "1",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "100",
+    "max": "299",
+    "ocorrencias": "1",
+    "diario": "20.0%",
+    "semana": "1",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "300",
+    "max": "499",
+    "ocorrencias": "1",
+    "diario": "15.0%",
+    "semana": "1",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "500",
+    "max": "699",
+    "ocorrencias": "1",
+    "diario": "14.0%",
+    "semana": "1",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "700",
+    "max": "899",
+    "ocorrencias": "1",
+    "diario": "13.0%",
+    "semana": "1",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "900",
+    "max": "999",
+    "ocorrencias": "1",
+    "diario": "12.0%",
+    "semana": "1",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "1000",
+    "max": "1999",
+    "ocorrencias": "1",
+    "diario": "11.0%",
+    "semana": "1",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "2000",
+    "max": "2999",
+    "ocorrencias": "1",
+    "diario": "10.0%",
+    "semana": "1",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "3000",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "50.0%",
+    "semana": "1",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "0",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "50.0%",
+    "semana": "1",
+    "dif": "100.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "0",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "50.0%",
+    "semana": "1",
+    "dif": "100.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "5",
+    "max": "9",
+    "ocorrencias": "1",
+    "diario": "90.0%",
+    "semana": "10",
+    "dif": "10.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "10",
+    "max": "29",
+    "ocorrencias": "1",
+    "diario": "70.0%",
+    "semana": "8",
+    "dif": "9.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "30",
+    "max": "49",
+    "ocorrencias": "1",
+    "diario": "50.0%",
+    "semana": "7",
+    "dif": "8.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "50",
+    "max": "99",
+    "ocorrencias": "1",
+    "diario": "40.0%",
+    "semana": "6",
+    "dif": "7.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "100",
+    "max": "200",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "5",
+    "dif": "6.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "201",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "5",
+    "dif": "6.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "10",
+    "max": "49",
+    "ocorrencias": "3",
+    "diario": "60.0%",
+    "semana": "10",
+    "dif": "10.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "50",
+    "max": "99",
+    "ocorrencias": "3",
+    "diario": "50.0%",
+    "semana": "8",
+    "dif": "9.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "100",
+    "max": "149",
+    "ocorrencias": "2",
+    "diario": "40.0%",
+    "semana": "7",
+    "dif": "8.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "150",
+    "max": "199",
+    "ocorrencias": "2",
+    "diario": "30.0%",
+    "semana": "6",
+    "dif": "7.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "200",
+    "max": "299",
+    "ocorrencias": "1",
+    "diario": "20.0%",
+    "semana": "5",
+    "dif": "6.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "300",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "20.0%",
+    "semana": "5",
+    "dif": "6.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "300",
+    "max": "499",
+    "ocorrencias": "3",
+    "diario": "7.0%",
+    "semana": "10",
+    "dif": "5.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "500",
+    "max": "699",
+    "ocorrencias": "2",
+    "diario": "6.0%",
+    "semana": "8",
+    "dif": "4.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "700",
+    "max": "999",
+    "ocorrencias": "2",
+    "diario": "5.0%",
+    "semana": "7",
+    "dif": "3.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "1000",
+    "max": "1999",
+    "ocorrencias": "1",
+    "diario": "4.0%",
+    "semana": "6",
+    "dif": "2.0"
+  },
+   {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "2000",
+    "max": "3000",
+    "ocorrencias": "1",
+    "diario": "3.0%",
+    "semana": "5",
+    "dif": "1.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Cancelada",
+    "min": "3001",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "3.0%",
+    "semana": "5",
+    "dif": "1.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "5",
+    "max": "9",
+    "ocorrencias": "1",
+    "diario": "90.0%",
+    "semana": "10",
+    "dif": "30.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "10",
+    "max": "29",
+    "ocorrencias": "1",
+    "diario": "70.0%",
+    "semana": "8",
+    "dif": "16.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "30",
+    "max": "49",
+    "ocorrencias": "1",
+    "diario": "50.0%",
+    "semana": "7",
+    "dif": "15.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "50",
+    "max": "99",
+    "ocorrencias": "1",
+    "diario": "40.0%",
+    "semana": "6",
+    "dif": "14.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "100",
+    "max": "200",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "5",
+    "dif": "13.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "201",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "5",
+    "dif": "13.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "10",
+    "max": "49",
+    "ocorrencias": "3",
+    "diario": "90.0%",
+    "semana": "10",
+    "dif": "30.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "50",
+    "max": "99",
+    "ocorrencias": "3",
+    "diario": "70.0%",
+    "semana": "8",
+    "dif": "16.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "100",
+    "max": "149",
+    "ocorrencias": "2",
+    "diario": "50.0%",
+    "semana": "7",
+    "dif": "15.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "150",
+    "max": "199",
+    "ocorrencias": "2",
+    "diario": "35.0%",
+    "semana": "6",
+    "dif": "14.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "200",
+    "max": "299",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "5",
+    "dif": "13.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "300",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "5",
+    "dif": "13.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "300",
+    "max": "499",
+    "ocorrencias": "3",
+    "diario": "25.0%",
+    "semana": "10",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "500",
+    "max": "699",
+    "ocorrencias": "2",
+    "diario": "23.0%",
+    "semana": "8",
+    "dif": "11.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "700",
+    "max": "999",
+    "ocorrencias": "2",
+    "diario": "22.0%",
+    "semana": "7",
+    "dif": "10.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "1000",
+    "max": "1999",
+    "ocorrencias": "1",
+    "diario": "21.0%",
+    "semana": "6",
+    "dif": "9.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "2000",
+    "max": "3000",
+    "ocorrencias": "1",
+    "diario": "20.0%",
+    "semana": "5",
+    "dif": "8.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Negada",
+    "min": "3001",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "20.0%",
+    "semana": "5",
+    "dif": "8.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "5",
+    "max": "9",
+    "ocorrencias": "1",
+    "diario": "90.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+   {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "10",
+    "max": "29",
+    "ocorrencias": "1",
+    "diario": "70.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "30",
+    "max": "49",
+    "ocorrencias": "1",
+    "diario": "50.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "50",
+    "max": "99",
+    "ocorrencias": "1",
+    "diario": "40.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "100",
+    "max": "200",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "201",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "10",
+    "max": "99",
+    "ocorrencias": "3",
+    "diario": "20.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "100",
+    "max": "199",
+    "ocorrencias": "2",
+    "diario": "10.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "200",
+    "max": "299",
+    "ocorrencias": "1",
+    "diario": "5.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "300",
+    "max": "399",
+    "ocorrencias": "1",
+    "diario": "4.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "400",
+    "max": "500",
+    "ocorrencias": "1",
+    "diario": "3.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "501",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "3.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "10",
+    "max": "99",
+    "ocorrencias": "3",
+    "diario": "10.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "100",
+    "max": "299",
+    "ocorrencias": "2",
+    "diario": "5.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "300",
+    "max": "1999",
+    "ocorrencias": "1",
+    "diario": "1.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "2000",
+    "max": "4999",
+    "ocorrencias": "2",
+    "diario": "0.5%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "5000",
+    "max": "10000",
+    "ocorrencias": "3",
+    "diario": "0.1%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Timeout",
+    "min": "10001",
+    "max": "9999999",
+    "ocorrencias": "3",
+    "diario": "0.1%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "5",
+    "max": "9",
+    "ocorrencias": "1",
+    "diario": "70.0%",
+    "semana": "10",
+    "dif": "10.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "10",
+    "max": "29",
+    "ocorrencias": "1",
+    "diario": "60.0%",
+    "semana": "8",
+    "dif": "8.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "30",
+    "max": "49",
+    "ocorrencias": "1",
+    "diario": "50.0%",
+    "semana": "7",
+    "dif": "7.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "50",
+    "max": "99",
+    "ocorrencias": "1",
+    "diario": "40.0%",
+    "semana": "6",
+    "dif": "6.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "100",
+    "max": "200",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "5",
+    "dif": "5.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "201",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "5",
+    "dif": "5.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "10",
+    "max": "49",
+    "ocorrencias": "3",
+    "diario": "50.0%",
+    "semana": "10",
+    "dif": "10.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "50",
+    "max": "99",
+    "ocorrencias": "3",
+    "diario": "40.0%",
+    "semana": "8",
+    "dif": "9.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "100",
+    "max": "149",
+    "ocorrencias": "2",
+    "diario": "30.0%",
+    "semana": "7",
+    "dif": "8.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "150",
+    "max": "199",
+    "ocorrencias": "2",
+    "diario": "20.0%",
+    "semana": "6",
+    "dif": "7.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "200",
+    "max": "299",
+    "ocorrencias": "1",
+    "diario": "10.0%",
+    "semana": "5",
+    "dif": "6.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "300",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "10.0%",
+    "semana": "5",
+    "dif": "6.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "300",
+    "max": "499",
+    "ocorrencias": "3",
+    "diario": "5.0%",
+    "semana": "10",
+    "dif": "5.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "500",
+    "max": "699",
+    "ocorrencias": "2",
+    "diario": "4.0%",
+    "semana": "8",
+    "dif": "4.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "700",
+    "max": "999",
+    "ocorrencias": "2",
+    "diario": "3.0%",
+    "semana": "7",
+    "dif": "3.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "1000",
+    "max": "1999",
+    "ocorrencias": "1",
+    "diario": "2.0%",
+    "semana": "6",
+    "dif": "2.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "2000",
+    "max": "3000",
+    "ocorrencias": "1",
+    "diario": "1.0%",
+    "semana": "5",
+    "dif": "1.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Cancelada",
+    "min": "3001",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "1.0%",
+    "semana": "5",
+    "dif": "1.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "5",
+    "max": "9",
+    "ocorrencias": "1",
+    "diario": "70.0%",
+    "semana": "10",
+    "dif": "30.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "10",
+    "max": "29",
+    "ocorrencias": "1",
+    "diario": "60.0%",
+    "semana": "8",
+    "dif": "16.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "30",
+    "max": "49",
+    "ocorrencias": "1",
+    "diario": "50.0%",
+    "semana": "7",
+    "dif": "15.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "50",
+    "max": "99",
+    "ocorrencias": "1",
+    "diario": "40.0%",
+    "semana": "6",
+    "dif": "14.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "100",
+    "max": "200",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "5",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "201",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "5",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "10",
+    "max": "49",
+    "ocorrencias": "3",
+    "diario": "70.0%",
+    "semana": "10",
+    "dif": "30.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "50",
+    "max": "99",
+    "ocorrencias": "3",
+    "diario": "50.0%",
+    "semana": "8",
+    "dif": "17.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "100",
+    "max": "149",
+    "ocorrencias": "2",
+    "diario": "30.0%",
+    "semana": "7",
+    "dif": "16.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "150",
+    "max": "199",
+    "ocorrencias": "2",
+    "diario": "20.0%",
+    "semana": "6",
+    "dif": "15.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "200",
+    "max": "299",
+    "ocorrencias": "1",
+    "diario": "15.0%",
+    "semana": "5",
+    "dif": "14.0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "300",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "15.0%",
+    "semana": "5",
+    "dif": "13.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "300",
+    "max": "499",
+    "ocorrencias": "3",
+    "diario": "14.0%",
+    "semana": "10",
+    "dif": "12.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "500",
+    "max": "699",
+    "ocorrencias": "2",
+    "diario": "13.0%",
+    "semana": "8",
+    "dif": "11.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "700",
+    "max": "999",
+    "ocorrencias": "2",
+    "diario": "12.0%",
+    "semana": "7",
+    "dif": "10.0"
+  },
+   {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "1000",
+    "max": "1999",
+    "ocorrencias": "1",
+    "diario": "11.0%",
+    "semana": "6",
+    "dif": "9.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "2000",
+    "max": "3000",
+    "ocorrencias": "1",
+    "diario": "10.0%",
+    "semana": "5",
+    "dif": "8.0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Negada",
+    "min": "3001",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "10.0%",
+    "semana": "5",
+    "dif": "8.0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "5",
+    "max": "9",
+    "ocorrencias": "1",
+    "diario": "90.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "10",
+    "max": "29",
+    "ocorrencias": "1",
+    "diario": "70.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "30",
+    "max": "49",
+    "ocorrencias": "1",
+    "diario": "50.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "50",
+    "max": "99",
+    "ocorrencias": "1",
+    "diario": "40.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "100",
+    "max": "200",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "201",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "10",
+    "max": "99",
+    "ocorrencias": "3",
+    "diario": "20.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "100",
+    "max": "199",
+    "ocorrencias": "2",
+    "diario": "10.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "200",
+    "max": "299",
+    "ocorrencias": "1",
+    "diario": "5.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "300",
+    "max": "399",
+    "ocorrencias": "1",
+    "diario": "4.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "400",
+    "max": "500",
+    "ocorrencias": "1",
+    "diario": "3.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "501",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "3.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "10",
+    "max": "99",
+    "ocorrencias": "3",
+    "diario": "10.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "100",
+    "max": "299",
+    "ocorrencias": "2",
+    "diario": "5.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "300",
+    "max": "1999",
+    "ocorrencias": "1",
+    "diario": "1.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "2000",
+    "max": "4999",
+    "ocorrencias": "2",
+    "diario": "0.5%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "5000",
+    "max": "10000",
+    "ocorrencias": "3",
+    "diario": "0.1%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Credito",
+    "tipoMetrica": "Desfazimento",
+    "min": "10001",
+    "max": "9999999",
+    "ocorrencias": "3",
+    "diario": "0.1%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "5",
+    "max": "9",
+    "ocorrencias": "1",
+    "diario": "90.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "10",
+    "max": "29",
+    "ocorrencias": "1",
+    "diario": "70.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "30",
+    "max": "49",
+    "ocorrencias": "1",
+    "diario": "50.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "50",
+    "max": "99",
+    "ocorrencias": "1",
+    "diario": "40.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "100",
+    "max": "200",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "201",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "30.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "10",
+    "max": "99",
+    "ocorrencias": "3",
+    "diario": "20.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "100",
+    "max": "199",
+    "ocorrencias": "2",
+    "diario": "10.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "200",
+    "max": "299",
+    "ocorrencias": "1",
+    "diario": "5.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "300",
+    "max": "399",
+    "ocorrencias": "1",
+    "diario": "4.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "400",
+    "max": "500",
+    "ocorrencias": "1",
+    "diario": "3.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "501",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "3.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "10",
+    "max": "99",
+    "ocorrencias": "3",
+    "diario": "10.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "100",
+    "max": "299",
+    "ocorrencias": "2",
+    "diario": "5.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "300",
+    "max": "1999",
+    "ocorrencias": "1",
+    "diario": "1.0%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "2000",
+    "max": "4999",
+    "ocorrencias": "1",
+    "diario": "0.5%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "5000",
+    "max": "10000",
+    "ocorrencias": "1",
+    "diario": "0.1%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Timeout",
+    "min": "10001",
+    "max": "9999999",
+    "ocorrencias": "1",
+    "diario": "0.1%",
+    "semana": "0",
+    "dif": "0"
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 5,
+    "max": 9,
+    "ocorrencias": 1,
+    "diario": "90.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 10,
+    "max": 29,
+    "ocorrencias": 1,
+    "diario": "70.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 30,
+    "max": 49,
+    "ocorrencias": 1,
+    "diario": "50.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 50,
+    "max": 99,
+    "ocorrencias": 1,
+    "diario": "40.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 100,
+    "max": 200,
+    "ocorrencias": 1,
+    "diario": "30.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "1d",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 201,
+    "max": 9999999,
+    "ocorrencias": 1,
+    "diario": "30.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 10,
+    "max": 99,
+    "ocorrencias": 3,
+    "diario": "20.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 100,
+    "max": 199,
+    "ocorrencias": 2,
+    "diario": "10.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 200,
+    "max": 299,
+    "ocorrencias": 1,
+    "diario": "5.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 300,
+    "max": 399,
+    "ocorrencias": 1,
+    "diario": "4.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 400,
+    "max": 500,
+    "ocorrencias": 1,
+    "diario": "3.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "1h",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 501,
+    "max": 9999999,
+    "ocorrencias": 1,
+    "diario": "3.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 10,
+    "max": 99,
+    "ocorrencias": 3,
+    "diario": "10.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 100,
+    "max": 299,
+    "ocorrencias": 2,
+    "diario": "5.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 300,
+    "max": 1999,
+    "ocorrencias": 1,
+    "diario": "1.0%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 2000,
+    "max": 4999,
+    "ocorrencias": 1,
+    "diario": "0.5%",
+    "semana": 0,
+    "dif": 0
+  },
+  {
+    "periodicidade": "10m",
+    "plataforma": "Debito",
+    "tipoMetrica": "Desfazimento",
+    "min": 5000,
+    "max": 10000,
+    "ocorrencias": 1,
+    "diario": "0.1%",
+    "semana": 0,
+    "dif": 0
+  }
 ];
+
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -40,6 +2077,15 @@ const App = () => {
     minCapturas: "",
   });
 
+  // 🔽 Função para ordenar por prioridade de periodicidade
+  const ordenarDados = (dados) => {
+    const prioridade = { '1d': 3, '1h': 2, '10m': 1 };
+    return [...dados].sort((a, b) => {
+      return (prioridade[b.periodicidade] || 0) - (prioridade[a.periodicidade] || 0);
+    });
+  };
+
+  // 🔽 Aplicar filtros e ordenar resultado
   const aplicarFiltros = useCallback(() => {
     const { geral1, geral2, plataforma, minCapturas } = filters;
 
@@ -55,12 +2101,14 @@ const App = () => {
       return matchFiltro1 && matchFiltro2 && matchPlataforma && matchMin;
     });
 
-    setData(filtrado);
+    setData(ordenarDados(filtrado)); // ⬅ aplicar ordenação aqui
   }, [filters, originalData]);
 
+  // 🔽 Carregar e ordenar dados inicialmente
   useEffect(() => {
-    setData(sampleData);
-    setOriginalData(sampleData);
+    const ordenado = ordenarDados(sampleData);
+    setData(ordenado);
+    setOriginalData(ordenado);
   }, []);
 
   useEffect(() => {
@@ -97,6 +2145,8 @@ const App = () => {
     setOriginalData([...data]);
     alert("Dados salvos localmente.");
   };
+
+  // ... resto do componente permanece igual
 
   return (
     <div className="container">
@@ -154,7 +2204,14 @@ const App = () => {
       <div className="header">
         <div className="header-title">Tabela Dinâmica de Métricas</div>
         <div className="header-center">Total: {data.length}</div>
-        <button className="header-link">Documento RCA</button>
+        <a
+  className="header-link"
+  href="https://elo-confluence.atlassian.net/wiki/x/CgC_nQ"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Documento RCA
+</a>
       </div>
 
       {/* Filtros */}
